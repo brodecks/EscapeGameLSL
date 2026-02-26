@@ -1,6 +1,6 @@
 import pyxdf
 
-cheminFichier = r'C:\Users\rapha\OneDrive\Documents\CurrentStudy\sub-P001\ses-S001\eeg\sub-P001_ses-S001_task-Default_run-001_eeg.xdf'
+cheminFichier = r'C:\Users\rapha\OneDrive\Documents\CurrentStudy\testLaptop-um-net.xdf'
 
 #chargemnt du fichier
 data, header = pyxdf.load_xdf(cheminFichier)
