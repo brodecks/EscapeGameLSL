@@ -49,5 +49,10 @@ def animate(i):
 # Intervalle de 100ms pour une mise à jour fluide
 ani = FuncAnimation(fig, animate, interval=100, cache_frame_data=False)
 
+def closeWindow(event):
+    fig.savefig("mon_graphique1.png")
+
+fig.canvas.mpl_connect('close_event', closeWindow)
+
 plt.tight_layout()
 plt.show()
