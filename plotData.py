@@ -17,7 +17,7 @@ inlet = StreamInlet(stream[0])
 nb_channels = inlet.channel_count
 
 if typeFlux == "chunk":
-    #while True:
+    while True:
         chunk, timestamp = inlet.pull_chunk()
         print(f"{timestamp} : {chunk}")
 
