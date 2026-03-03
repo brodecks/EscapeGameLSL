@@ -4,7 +4,6 @@ import random
 
 # Nom: 'HeartSim', Type: 'HR', Nb canaux: 1, Fréquence: 1Hz, Format: float32
 info = StreamInfo('HeartSim', 'HR', 1, 1, 'float32', 'pi-ceinture-001')
-
 outlet = StreamOutlet(info)
 
 print("Diffusion des donnees")

@@ -1,0 +1,1 @@
+#script permettant de traduire le flux bluetooth en LSL
