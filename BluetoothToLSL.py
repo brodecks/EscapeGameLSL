@@ -1,6 +1,7 @@
 import asyncio
 from bleak import BleakScanner, BleakClient
 from pylsl import StreamInfo, StreamOutlet
+from datetime import datetime
 
 HR_UUID = "00002a37-0000-1000-8000-00805f9b34fb"
 
@@ -23,7 +24,10 @@ async def run():
     def callback(sender, data):
         # data[1] contient les BPM (Fréquence Cardiaque)
         hr_bpm = data[1]
+        #horodatage
+        horaire = datetime.now().strftime("%H:%M:%S.%f")[:-3]
         print(f"BPM envoyé vers LSL: {hr_bpm}")
+        print(f"Heure : {horaire[:-3]}")
         outlet.push_sample([float(hr_bpm)])
 
     async with BleakClient(device) as client:
